@@ -1,0 +1,20 @@
+<!-- Navbar with menu button -->
+<mat-toolbar class="navbar">
+    <button mat-icon-button (click)="toggleSidebar()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="logo">My Portfolio</span>
+  
+    <span class="spacer"></span>
+  </mat-toolbar>
+  
+  <!-- Sidebar -->
+  <div class="sidebar" [class.open]="isSidebarOpen">
+    <button class="close-btn" (click)="toggleSidebar()">&#x2715;</button>
+    <nav>
+      <a routerLink="" (click)="toggleSidebar()">Home</a>
+      <a routerLink="about" (click)="toggleSidebar()">About</a>
+      <a routerLink="contact" (click)="toggleSidebar()">Contact</a>
+    </nav>
+  </div>
+  
